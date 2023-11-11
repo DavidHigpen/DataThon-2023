@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
     <title>New Student Upload</title>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 </head>
 
 <body>
@@ -533,6 +534,45 @@
 
         <input type="submit" value="SUBMIT!">
     </form>
+
+
+    <div id="result-container">
+            <h2>Results</h2>
+            <p>Input Data: {{ input_data }}</p>
+            <p id="result">Output Data: {{ output_data }}</p>
+    </div>
+
+
+<script>
+    // Wrap the JavaScript code in a document-ready event handler
+    $(document).ready(function () {
+        // Explicitly bind the form submission event
+        $("#myForm").on("submit", function (event) {
+            // Prevent the default form submission
+            event.preventDefault();
+
+            // Get input value
+            var inputData = $("#input_data").val();
+
+            // Send data to server using AJAX
+            $.ajax({
+                type: "POST",
+                url: "/process",
+                data: { input_data: inputData },
+                success: function (data) {
+                    // Log data to the console for debugging
+                    console.log("Received data:", data);
+
+                    // Update the result element with the returned value
+                    $("#result").text("Output Data: " + data.output_data);
+                },
+                error: function (error) {
+                    console.error("Error:", error);
+                }
+            });
+        });
+    });
+</script>
 </body>
 
 </html>
