@@ -3,16 +3,104 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
     <title>Classify!</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 20px;
+        }
+        #output {
+            margin-top: 20px;
+        }
+        #plot {
+            margin-top: 20px;
+        }
+        #Categories {
+            width: 100px; 
+        }
+    </style>
 </head>
 <body>
     <nav>
         <a href="./index.html">Home</a>
-        <a href="./uploadForm.html">Add New Student!</a>
+        <a href="{{ url_for('uploadForm') }}">Add New Student!</a>
     </nav>
     <h1>Classify!</h1>
     <h2>Helping Teachers Gain Insight Into Their Students!</h2>
     <p>Howdy World!</p>
+    <label for="inputBox">Which category would you like to view?:</label>
+
+    <select id="Categories">
+        <option value="1">Student Age</option>
+        <option value="2">Sex</option>
+        <option value="3">Graduated high-school type</option>
+        <option value="4">Scholarship type</option>
+        <option value="5">Additional work</option>
+        <option value="6">Regular artistic or sports activity</option>
+        <option value="7">Do you have a partner</option>
+        <option value="8">Total salary if available</option>
+        <option value="9">Transportation to the university</option>
+        <option value="10">Accommodation type in Cyprus</option>
+        <option value="11">Mother's education</option>
+        <option value="12">Father's education</option>
+        <option value="13">Number of sisters/brothers</option>
+        <option value="14">Parental status</option>
+        <option value="15">Mother's occupation</option>
+        <option value="16">Father's occupation</option>
+        <option value="17">Weekly study hours</option>
+        <option value="18">Reading frequency</option>
+        <option value="19">Reading frequency</option>
+        <option value="20">Attendance to the seminars/conferences related to the department</option>
+        <option value="21">Impact of your projects/activities on your success</option>
+        <option value="22">Attendance to classes</option>
+        <option value="23">Preparation to midterm exams 1</option>
+        <option value="24">Preparation to midterm exams 2</option>
+        <option value="25">Taking notes in classes</option>
+        <option value="26">Listening in classes</option>
+        <option value="27">Discussion improves my interest and success in the course</option>
+        <option value="28">Flip-classroom</option>
+        <option value="29">Cumulative grade point average in the last semester (/4.00)</option>
+        <option value="30">Expected Cumulative grade point average in the graduation (/4.00)</option>
+        <option value="31">Course ID</option>
+        <option value="32">OUTPUT Grade</option>
+    </select>
+
+    <button onclick="sendInput()">Submit</button>
+
+    <div id="plot">
+        <!-- Pyplot will be displayed here -->
+    </div>
+    
+    <div id="output">
+        <!-- Output will be displayed here -->
+    </div>
+
+    <script>
+        function sendInput() {
+            // Get input value from the textbox
+            var inputData = document.getElementById("Categories").value;
+
+            // Send the input to the server (backend)
+            fetch('/process', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ data: inputData }),
+            })
+            .then(response => response.json())
+            .then(data => {
+                // Display the output on the website
+                // document.getElementById("average").innerHTML = "<p>Average of category: </p><p>" + data.average + "</p>";
+                
+                // Display the pyplot on the website
+                document.getElementById("plot").innerHTML = '<img src="data:image/png;base64,' + data.plot + '" alt="Pyplot" style="width: 35%; height: auto;">';
+                document.getElementById("output").innerHTML = "<p class='first-paragraph'>Average of category:</p><p>" + data.output + "</p>";
+            });
+        }
+    </script>
+
 </body>
 </html>
