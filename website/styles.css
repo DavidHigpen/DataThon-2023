@@ -37,3 +37,19 @@ body {
     background-color: #ebded5;
     color: #af7547
 }
+
+/* Style the form container */
+form {
+    width: 400px;
+    margin: 0 auto;
+}
+
+
+/* Style form inputs */
+
+.radio-option {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
