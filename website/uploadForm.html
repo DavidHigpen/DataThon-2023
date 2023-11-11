@@ -9,17 +9,306 @@
 <body>
     <nav>
         <a href="./index.html">Home</a>
-        <a href="./uploadForm.html">Add New Students!</a>
+        <a href="./uploadForm.html">Add New Student!</a>
         <a href="./Page3.html">Page3</a>
     </nav>
-    <h1>Add Data For New Students Here!</h1>
-    <form>
-        <input type="radio" id="18-21" name="Age" value="18-21">
-        <label for="18-21">18 - 21</label><br>
-        <input type="radio" id="22-25" name="Age" value="22-25">
-        <label for="22-25">22 - 25</label><br>
-        <input type="radio" id="javascript" name="fav_language" value="JavaScript">
-        <label for="javascript">Above 26</label>
-        </form>
+    <h1>Add Data For A New Student Here!</h1>
+    <form action="results.html" method="get">
+        
+        <label for="age">Age Group</label><br>
+        <input type="radio" id="A18_21" name="age" value="18">
+        <label for="A18_21">18 - 21</label>
+        <input type="radio" id="A22_25" name="age" value="22">
+        <label for="A22_25">22 - 25</label>
+        <input type="radio" id="AAbove_26" name="age" value="26">
+        <label for="AAbove_26">Above 26</label><br><br>
+
+        <label for="Sex">Sex</label><br>
+        <input type="radio" id="Smale" name="Sex" value="male">
+        <label for="Smale">Male</label>
+        <input type="radio" id="Sfemale" name="Sex" value="female">
+        <label for="Sfemale">Female</label><br><br>
+
+        <label for="HighSchoolType">Graduated High School Type</label><br>
+        <input type="radio" id="Hprivate" name="HighSchoolType" value="private">
+        <label for="Hprivate">private</label>
+        <input type="radio" id="Hstate" name="HighSchoolType" value="state">
+        <label for="Hstate">state</label>
+        <input type="radio" id="Hother" name="HighSchoolType" value="other">
+        <label for="Hother">other</label><br><br>
+
+        <label for="scholarshipType">Scholarship Type</label><br>
+        <input type="radio" id="S0" name="scholarshipType" value="0">
+        <label for="S0">None</label>
+        <input type="radio" id="S25" name="scholarshipType" value="25">
+        <label for="S25">25%</label>
+        <input type="radio" id="S50" name="scholarshipType" value="50">
+        <label for="S50">50%</label>
+        <input type="radio" id="S75" name="scholarshipType" value="75">
+        <label for="S75">75%</label>
+        <input type="radio" id="S100" name="scholarshipType" value="100">
+        <label for="S100">Full</label><br><br>
+
+        <label for="additionalWork">Additional Work?</label><br>
+        <input type="radio" id="Ayes" name="additionalWork" value="yes">
+        <label for="Ayes">yes</label>
+        <input type="radio" id="Ano" name="additionalWork" value="no">
+        <label for="Ano">no</label><br><br>
+
+        <label for="artOrSports">Regular artistic or sports activity?</label><br>
+        <input type="radio" id="Ryes" name="artOrSports" value="yes">
+        <label for="Ryes">yes</label>
+        <input type="radio" id="Rno" name="artOrSports" value="no">
+        <label for="Rno">no</label><br><br>
+
+        <label for="partner">Do you have a partner?</label><br>
+        <input type="radio" id="Dyes" name="partner" value="yes">
+        <label for="Dyes">yes</label>
+        <input type="radio" id="Dno" name="partner" value="no">
+        <label for="Dno">no</label><br><br>
+
+        <label for="salary">Total salary if available:</label><br>
+        <input type="radio" id="USD135-200" name="salary" value="135">
+        <label for="USD135-200">USD 135-200</label>
+        <input type="radio" id="USD201-270" name="salary" value="201">
+        <label for="USD201-270">USD 201-270</label>
+        <input type="radio" id="USD271-340" name="salary" value="271">
+        <label for="USD271-340">USD 271-340</label>
+        <input type="radio" id="USD341-410" name="salary" value="341">
+        <label for="USD341-410">USD 341-410</label>
+        <input type="radio" id="above410" name="salary" value="411">
+        <label for="above410">above 410</label><br><br>
+
+        <label for="transport">Transportation to the university:</label><br>
+        <input type="radio" id="bus" name="transport" value="bus">
+        <label for="bus">Bus</label>
+        <input type="radio" id="car" name="transport" value="car">
+        <label for="car">Private car/taxi</label>
+        <input type="radio" id="bicycle" name="transport" value="bicycle">
+        <label for="bicycle">bicycle</label>
+        <input type="radio" id="Other" name="transport" value="Other">
+        <label for="Other">Other</label><br><br>
+
+        <label for="Accommodation">Accommodation type in Cyprus:</label><br>
+        <input type="radio" id="rental" name="Accommodation" value="rental">
+        <label for="rental">rental</label>
+        <input type="radio" id="dormitory" name="Accommodation" value="dormitory">
+        <label for="dormitory">dormitory</label>
+        <input type="radio" id="family" name="Accommodation" value="family">
+        <label for="family">with family</label>
+        <input type="radio" id="Other" name="Accommodation" value="other">
+        <label for="Other">Other</label><br><br>
+
+        <label for="MotherEdu">Mother's education:</label><br>
+        <input type="radio" id="primarySchool" name="MotherEdu" value="primary">
+        <label for="primarySchool">primary school</label>
+        <input type="radio" id="secondarySchool" name="MotherEdu" value="secondary">
+        <label for="secondarySchool">secondary school</label>
+        <input type="radio" id="highSchool" name="MotherEdu" value="high">
+        <label for="highSchool">high school</label>
+        <input type="radio" id="university" name="MotherEdu" value="university">
+        <label for="university">university</label>
+        <input type="radio" id="MSc" name="MotherEdu" value="MSc">
+        <label for="MSc">MSc.</label>
+        <input type="radio" id="PhD" name="MotherEdu" value="PhD">
+        <label for="PhD">Ph.D.</label><br><br>
+
+        <label for="FatherEdu">Father's education:</label><br>
+        <input type="radio" id="FprimarySchool" name="FatherEdu" value="primary">
+        <label for="FprimarySchool">primary school</label>
+        <input type="radio" id="FsecondarySchool" name="FatherEdu" value="secondary">
+        <label for="FsecondarySchool">secondary school</label>
+        <input type="radio" id="FhighSchool" name="FatherEdu" value="high">
+        <label for="FhighSchool">high school</label>
+        <input type="radio" id="Funiversity" name="FatherEdu" value="university">
+        <label for="Funiversity">university</label>
+        <input type="radio" id="FMSc" name="FatherEdu" value="MSc">
+        <label for="FMSc">MSc.</label>
+        <input type="radio" id="FPhD" name="FatherEdu" value="PhD">
+        <label for="FPhD">Ph.D.</label><br><br>
+
+        <label for="Siblings">Number of sisters/brothers (if available)</label><br>
+       <input type="radio" id="1" name="Siblings" value="0">
+       <label for="1">1</label>
+       <input type="radio" id="2" name="Siblings" value="1">
+       <label for="2">2</label>
+       <input type="radio" id="3" name="Siblings" value="2">
+       <label for="3">3</label>
+       <input type="radio" id="4" name="Siblings" value="3">
+       <label for="4">4</label>
+       <input type="radio" id="5orAbove" name="Siblings" value="4">
+       <label for="5 or above">5 or above</label><br><br>
+
+
+       <label for="ParStat">Parental status</label><br>
+       <input type="radio" id="Married" name="ParStat" value="0">
+       <label for="Married">Married</label>
+       <input type="radio" id="Divorced" name="ParStat" value="1">
+       <label for="Divorced">Divorced</label>
+       <input type="radio" id="Died" name="ParStat" value="2">
+       <label for="Died - one of them or both">Died - one of them or both</label><br><br>
+
+
+       <label for="MotherOcc">Father's occupation</label><br>
+       <input type="radio" id="MRetired" name="MotherOcc" value="0">
+       <label for="Retired">Retired</label>
+       <input type="radio" id="Housewife" name="MotherOcc" value="1">
+       <label for="Housewife">Housewife</label>
+       <input type="radio" id="MGovernmentOfficer" name="MotherOccc" value="2">
+       <label for="Government Officer">Government Officer</label>
+       <input type="radio" id="MPrivateSectorEmployee" name="MotherOcc" value="3">
+       <label for="Private Sector Employee">Private Sector Employee</label>
+       <input type="radio" id="MSelf-employment" name="MotherOcc" value="4">
+       <label for="Self-employment">Self-employment</label>
+       <input type="radio" id="MOther" name="MotherOcc" value="5">
+       <label for="Other">Other</label><br><br>
+
+
+       <label for="FatherOcc">Father's occupation</label><br>
+       <input type="radio" id="Retired" name="FatherOcc" value="0">
+       <label for="Retired">Retired</label>
+       <input type="radio" id="GovernmentOfficer" name="FatherOcc" value="1">
+       <label for="Government Officer">Government Officer</label>
+       <input type="radio" id="PrivateSectorEmployee" name="FatherOcc" value="2">
+       <label for="Private Sector Employee">Private Sector Employee</label>
+       <input type="radio" id="Self-employment" name="FatherOcc" value="3">
+       <label for="Self-employment">Self-employment</label>
+       <input type="radio" id="Other" name="FatherOcc" value="4">
+       <label for="Other">Other</label><br><br>
+
+
+       <label for="StudyHrs">Weekly study hours</label><br>
+       <input type="radio" id="SNone" name="StudyHrs" value="0">
+       <label for="None">None</label>
+       <input type="radio" id="SLess5hrs" name="StudyHrs" value="1">
+       <label for="Less than 5 hrs">Less than 5 hrs</label>
+       <input type="radio" id="S6-10hrs" name="StudyHrs" value="2">
+       <label for="6 - 10 hours">6 - 10 hours</label>
+       <input type="radio" id="S11-20hrs" name="StudyHrs" value="3">
+       <label for="11 - 20 hours">11 - 20 hours</label>
+       <input type="radio" id="SMore20hrs" name="StudyHrs" value="4">
+       <label for="More than 20 hours">More than 20 hours</label><br><br>
+
+
+       <label for="Read">Reading frequency (non-scientific books/journals)</label><br>
+       <input type="radio" id="RFNone" name="Read" value="0">
+       <label for="None">None</label>
+       <input type="radio" id="RFSometimes" name="Read" value="1">
+       <label for="Sometimes">Sometimes</label>
+       <input type="radio" id="RFOften" name="Read" value="2">
+       <label for="Often">Often</label><br><br>
+
+       <label for="ReadSci">Reading frequency (scientific books/journals)</label><br>
+       <input type="radio" id="SciNone" name="ReadSci" value="0">
+       <label for="None">None</label>
+       <input type="radio" id="SciSometimes" name="ReadSci" value="1">
+       <label for="Sometimes">Sometimes</label>
+       <input type="radio" id="SciOften" name="ReadSci" value="2">
+       <label for="Often">Often</label><br><br>
+
+
+       <label for="AttendaceSem">Attendance to the seminars/conferences related to the department</label><br>
+       <input type="radio" id="ASYes" name="AttendaceSem" value="0">
+       <label for="Yes">Yes</label>
+       <input type="radio" id="ASNo" name="AttendaceSem" value="1">
+       <label for="No">No</label><br><br>
+
+
+       <label for="Impact">Impact of your projects/activities on your success</label><br>
+       <input type="radio" id="ImpPositive" name="Impact" value="0">
+       <label for="Positive">Positive</label>
+       <input type="radio" id="ImpNegative" name="Impact" value="1">
+       <label for="Negative">Negative</label>
+       <input type="radio" id="ImpNeutral" name="Impact" value="2">
+       <label for="Neutral">Neutral</label><br><br>
+
+
+       <label for="Attendance">Attendance to classes</label><br>
+       <input type="radio" id="ACNever" name="Attendance" value="0">
+       <label for="Never">Never</label>
+       <input type="radio" id="ACSometimes" name="Attendance" value="1">
+       <label for="Sometimes">Sometimes</label>
+       <input type="radio" id="ACAlways" name="Attendance" value="2">
+       <label for="Always">Always</label><br><br>
+
+       <label for="PrepFriend">Preparation to midterm exams 1</label><br>
+       <input type="radio" id="PAlone" name="PrepFriend" value="0">
+       <label for="Alone">Alone</label>
+       <input type="radio" id="PWFriend" name="PrepFriend" value="1">
+       <label for="WFriend">With Friends</label>
+       <input type="radio" id="PNotApp" name="PrepFriend" value="2">
+       <label for="NotApp">Not Applicable</label><br><br>
+
+
+       <label for="PrepTime">Preparation to midterm exams 2</label><br>
+       <input type="radio" id="PrClose" name="PrepTime" value="0">
+       <label for="Close">Closest date to the exam</label>
+       <input type="radio" id="PrRegularly" name="PrepTime" value="1">
+       <label for="Regularly">Regularly during the semester</label>
+       <input type="radio" id="PrNever" name="PrepTime" value="2">
+       <label for="Never">Never</label><br><br>
+
+
+       <label for="Notes">Taking notes in classes</label><br>
+       <input type="radio" id="NNever" name="Notes" value="0">
+       <label for="Never">Never</label>
+       <input type="radio" id="NSometimes" name="Notes" value="1">
+       <label for="Sometimes">Sometimes</label>
+       <input type="radio" id="NAlways" name="Notes" value="2">
+       <label for="Always">Always</label><br><br>
+
+
+       <label for="Listening">Listening in classes</label><br>
+       <input type="radio" id="LNever" name="Listening" value="0">
+       <label for="Never">Never</label>
+       <input type="radio" id="LSometimes" name="Listening" value="1">
+       <label for="Sometimes">Sometimes</label>
+       <input type="radio" id="LAlways" name="Listening" value="2">
+       <label for="Always">Always</label><br><br>
+
+
+       <label for="Discussion">Discussion improves my interest and success in the course</label><br>
+       <input type="radio" id="DNever" name="Discussion" value="0">
+       <label for="Never">Never</label>
+       <input type="radio" id="DSometimes" name="Discussion" value="1">
+       <label for="Sometimes">Sometimes</label>
+       <input type="radio" id="DAlways" name="Discussion" value="2">
+       <label for="Always">Always</label><br><br>
+
+
+       <label for="Flip">Flip-classroom</label><br>
+       <input type="radio" id="FNotUseful" name="Flip" value="0">
+       <label for="Not Useful">Not Useful</label>
+       <input type="radio" id="FUseful" name="Flip" value="1">
+       <label for="Useful">Useful</label>
+       <input type="radio" id="FNotApp" name="Flip" value="2">
+       <label for="Not Applicable">Not Applicable</label><br><br>
+
+
+       <label for="CumulativeGPA">Cumulative grade point average in the last semester (/4.00)</label><br>
+       <input type="radio" id="CLess2" name="CumulativeGPA" value="0">
+       <label for="Less than 2.00">Less than 2.00</label>
+       <input type="radio" id="CMin2" name="CumulativeGPA" value="1">
+       <label for="2.00 - 2.49">2.00 - 2.49</label>
+       <input type="radio" id="CMin25" name="CumulativeGPA" value="2">
+       <label for="2.50 - 2.99">2.50 - 2.99</label>
+       <input type="radio" id="CMin3" name="CumulativeGPA" value="3">
+       <label for="3.00 - 3.49">3.00 - 3.49</label>
+       <input type="radio" id="CMax4" name="CumulativeGPA" value="4">
+       <label for="Above 3.49">Above 3.49</label><br><br>
+
+
+       <label for="ExpectedGPA">Expected Cumulative grade point average in the graduation (/4.00)</label><br>
+       <input type="radio" id="ELess2" name="ExpectedGPA" value="0">
+       <label for="Less than 2.00">Less than 2.00</label>
+       <input type="radio" id="CMin2" name="ExpectedGPA" value="1">
+       <label for="2.00 - 2.49">2.00 - 2.49</label>
+       <input type="radio" id="CMin25" name="ExpectedGPA" value="2">
+       <label for="2.50 - 2.99">2.50 - 2.99</label>
+       <input type="radio" id="CMin3" name="ExpectedGPA" value="3">
+       <label for="3.00 - 3.49">3.00 - 3.49</label>
+       <input type="radio" id="CMax4" name="ExpectedGPA" value="4">
+       <label for="Above 3.49">Above 3.49</label><br><br>
+    </form>
 </body>
 </html>
